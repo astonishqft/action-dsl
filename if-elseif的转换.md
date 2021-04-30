@@ -112,34 +112,37 @@ end
     "properties": {
       "title": "message2"
     },
-    "conditionNodes": [
-      {
-        "conditionType": "if",
-        "type": "condition",
-        "properties": {
-          "title": "条件1"
-        },
-        "childNode": {
-          "type": "message",
+    "childNode": {
+      "conditionNodes": [
+        {
+          "conditionType": "if",
+          "type": "condition",
           "properties": {
-            "title": "message3"
-          }
-        }
-      },
-      {
-        "type": "condition",
-        "conditionType": "if",
-        "childNode": {
-          "type": "message",
-          "properties": {
-            "title": "message4"
+            "title": "条件1"
+          },
+          "childNode": {
+            "type": "message",
+            "properties": {
+              "title": "message3"
+            }
           }
         },
-        "properties": {
-          "title": "条件2"
+        {
+          "type": "condition",
+          "conditionType": "if",
+          "childNode": {
+            "type": "message",
+            "properties": {
+              "title": "message4"
+            }
+          },
+          "properties": {
+            "title": "条件2"
+          }
         }
-      }
-    ]
+      ],
+      "type": "conditions"
+    }
   }
 }
 ```
